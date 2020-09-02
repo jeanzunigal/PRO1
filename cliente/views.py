@@ -5,7 +5,7 @@ from .forms import clienteForm, Cliente
 def cliente(request, plantilla="usuario.html"):
     clientes = Cliente.objects.all()
     data = {
-        'clientes':clientes
+        'cliente':clientes
     }
     return render(request, plantilla, data)
 #pagina de crear o insertar INSERT
