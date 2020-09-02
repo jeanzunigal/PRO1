@@ -1,0 +1,29 @@
+{% extends "usuario.html" %}
+{% load static %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Email</th>
+            <th>Sexo</th>
+            <th>Opciones</th>
+        </tr>
+
+        {% for p in cliente %}
+
+        <tr>
+            <td>{{ p.apellido }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.edad }}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.sexo }}</td>
+
+        </tr>
+
+         {% endfor %}
+    </table>
+
+{% endblock %}
