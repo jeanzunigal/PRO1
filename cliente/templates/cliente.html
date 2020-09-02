@@ -20,6 +20,9 @@
             <td>{{ p.edad }}</td>
             <td>{{ p.email }}</td>
             <td>{{ p.sexo }}</td>
+            <td><a class="nav-link" href="{% url 'modificarcliente' p.id %}">Modificar</a></td>
+            <td><a class="nav-link" href="{% url 'eliminarcliente' p.id %}">Eliminar</a></td>
+
 
         </tr>
 
