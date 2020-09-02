@@ -15,7 +15,7 @@ def contact(request, plantilla="contact.html"):
 def bodega(request, plantilla="bodega.html"):
     return render(request, plantilla)
 
-def cliente(request, plantilla="usuario.html"):
+def usuario(request, plantilla="usuario.html"):
     return render(request, plantilla)
 
 def factura(request, plantilla="factura.html"):

@@ -4,4 +4,4 @@ from cliente import views
 urlpatterns = [
     path('cliente/', views.cliente, name="cliente"),
     path('crearcliente/', views.crearcliente, name="crearcliente"),
-    ]
+]
