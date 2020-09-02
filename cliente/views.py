@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from .forms import clienteForm, Cliente
-def cliente(request, plantilla="usuario.html"):
+def cliente(request, plantilla="cliente.html"):
     clientes = Cliente.objects.all()
     data = {
         'cliente':clientes
@@ -15,7 +15,7 @@ def crearcliente(request, plantilla="crearcliente.html"):
         form = clienteForm((request.POST or None))
         if form.is_valid():
             form.save()
-            return redirect('cliente')
+            return redirect('clientes')
     else:
         form = clienteForm
 
