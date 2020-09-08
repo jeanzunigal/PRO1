@@ -16,7 +16,7 @@ def crearcliente(request, plantilla="crearcliente.html"):
         form = clienteForm((request.POST or None))
         if form.is_valid():
             form.save()
-            return redirect('clientes')
+            return redirect('cliente')
     else:
         form = clienteForm
 

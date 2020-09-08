@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Citasss {% endblock title %}
+{% block title %} Citas {% endblock title %}
 
 {% block background %}{% load static %}{% static 'img/Registrocliente-bg.jpg' %}{% endblock %}
 
-{% block headers %}  <h1> Cliente </h1>
-    <span class="subheading"> Secret. Ana Lara </span> {% endblock %}
+{% block headers %}  <h1><font face="Comic Sans MS,Arial,Verdana">Clientes</font></h1>
+    <span class="subheading"> <font face="Comic Sans MS,Arial,Verdana">Secret. Ana Lara</font> </span> {% endblock %}
 {% block content %}
-    <a class="nav-link" href="{% url 'crearcliente' %}">Crear cliente</a>
-    <a class="nav-link" href="{% url 'cliente' %}">Lista de clientes</a>
+    <a class="nav-link" href="{% url 'crearcliente' %}"><mark><font face="Comic Sans MS,Arial,Verdana">Crear Cliente</font></mark></a>
+    <a class="nav-link" href="{% url 'cliente' %}"><mark><font face="Comic Sans MS,Arial,Verdana">Lista de Clientes</font></mark></a>
 {% endblock %}

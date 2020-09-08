@@ -27,5 +27,6 @@ urlpatterns = [
     path('factura/', views.factura, name="factura"),
     path('Mecanico/', views.mecanico, name="Mecanico"),
     path('cliente/', include('cliente.urls'),name="cliente"),
+    path('usuarios/', include('usuarios.urls'), name="usuarios"),
     path('admin/', admin.site.urls),
 ]

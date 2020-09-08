@@ -1,10 +1,14 @@
 {% extends "usuario.html" %}
 {% load static %}
 {% block content %}
-    <h2> Modificar cliente </h2>
+    <h2><div class="text-center"><font color="red">Modificar cliente</font></div></h2>
     <form method="POST" >
-        {% csrf_token %}
-            {{ form.as_p }}
-        <button type="submit" >Modificar cliente</button>
+        <div class="was-validated">
+            <div class="form-group">
+                {% csrf_token %}
+                    <div class="text-center form-control form-group container "><div class="form-control"><font color="black">{{ form.as_p }}</font></div></div>
+                    <div class="text-center"><button type="submit" class="btn btn-success left btn-dark" >Modificar cliente</button></div>
+            </div>
+        </div>
     </form>
 {% endblock %}

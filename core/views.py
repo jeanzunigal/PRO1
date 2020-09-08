@@ -1,10 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
 
 def home(request, plantilla="home.html"):
-    return render(request, plantilla)
+    # Si estamos identificados devolvemos la portada
+    if request.user.is_authenticated:
+        return render(request, plantilla)
+    # En otro caso redireccionamos al login
+    return redirect('login')
 
 def about(request, plantilla="about.html"):
     return render(request, plantilla)
